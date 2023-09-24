@@ -41,4 +41,3 @@ def isWinner(bo, le):
             (bo[9] == le and bo[6] == le and bo[3] == le) or
             (bo[7] == le and bo[5] == le and bo[3] == le) or
             (bo[9] == le and bo[5] == le and bo[1] == le))
-
