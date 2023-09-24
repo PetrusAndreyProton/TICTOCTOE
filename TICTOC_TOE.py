@@ -19,3 +19,26 @@ def inputPlayerLatter():
         return ['X', 'O']
     else:
         return ['O', 'X']
+
+
+def whoGoesFirst():
+    if random.randint(0, 1) == 0:
+        return 'Компьютер'
+    else:
+        return 'Человек'
+
+
+def makeMove(board, letter, move):
+    board[move] = letter
+
+
+def isWinner(bo, le):
+    return ((bo[7] == le and bo[8] == le and bo[9] == le) or
+            (bo[4] == le and bo[5] == le and bo[6] == le) or
+            (bo[1] == le and bo[2] == le and bo[3] == le) or
+            (bo[7] == le and bo[4] == le and bo[1] == le) or
+            (bo[8] == le and bo[5] == le and bo[2] == le) or
+            (bo[9] == le and bo[6] == le and bo[3] == le) or
+            (bo[7] == le and bo[5] == le and bo[3] == le) or
+            (bo[9] == le and bo[5] == le and bo[1] == le))
+
